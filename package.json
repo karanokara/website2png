@@ -1,0 +1,30 @@
+{
+  "name": "website2png",
+  "version": "1.0.0",
+  "description": "Take screenshot of a website to png. Usage: $> website2png.exe https://site.com",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "release": "tsc && pkg package.json",
+    "c": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "build/index.js",
+  "author": "",
+  "license": "ISC",
+  "pkg": {
+    "scripts": "build/index.js",
+    "assets": ".cache/**/*",
+    "targets": [
+      "node18"
+    ],
+    "outputPath": "release"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "puppeteer": "^21.6.0"
+  }
+}
